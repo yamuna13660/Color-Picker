@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     button{
+        background-color: aqua;
+        padding:3px;
+        border-radius: 5px;
+        margin-left: 200px;
+        margin-top:150px;
+     }
+     body{
+        width: 100%;
+        background-color: cornflowerblue;
+     }
+     @media screen and (width:360px) and (height:740px)
+     {
+        button{
+            padding:3px;
+            width:200px;
+        }
+        body
+        {
+            background-color: black;
+        }
+     }
+     @media screen and (width:375px) and (height:667px)
+     {
+        button{
+            padding:3px;
+            width:230px;
+        }
+        body
+        {
+            background-color:greenyellow;
+        }
+     }
+    </style>
+</head>
+<body>
+    <button id="btn"onclick="change()">Click Me To Change The Color!</button>
+    <script>
+        let btn=document.getElementById("btn");
+        let body=document.querySelector('body');
+        const colors=["pink","yellow","green",'red','black','navy','violet','orange','silver','maroon','olive','teal'];
+        function change()
+        {
+         let color=Math.floor(Math.random()*colors.length);
+         body.style.backgroundColor=colors[color];
+        }
+    </script>
+</body>
+</html>
